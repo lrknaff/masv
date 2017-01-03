@@ -1,0 +1,31 @@
+{
+  "name": "masv",
+  "version": "1.0.0",
+  "description": "masv portfolio",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --devtool",
+    "build": "webpack",
+    "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrknaff/masv.git"
+  },
+  "author": "Lacey Knaff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrknaff/masv/issues"
+  },
+  "homepage": "https://github.com/lrknaff/masv#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mocha-loader": "^1.0.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
