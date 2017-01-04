@@ -34,4 +34,4 @@ devtool: 'source-map',
 resolve: {
   extensions: ['', '.js', '.json', '.scss', '.css'],
 },
-}
+};
