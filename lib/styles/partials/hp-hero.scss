@@ -1,0 +1,45 @@
+/* Main Container */
+.hp-hero-main {
+  width: 100%;
+}
+
+.hp-hero-masthead {
+  min-height: 800px;
+  height: 100vh;
+  position: relative;
+  margin-top: -147px;
+  z-index: 1;
+}
+
+.hp-hero-masthead-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* MastHead */
+
+.hp-hero-header-container {
+  position: relative;
+  height: 200px;
+}
+
+.hp-hero-header-solid, .hp-hero-header-border {
+  position: absolute;
+  left: 50%;
+  margin-left: -(1180px / 2px);
+  width: 1120px;
+  height: 260px;
+}
+
+/* Subhead */
+
+.hp-hero-subhead {
+  text-align: center;
+}
