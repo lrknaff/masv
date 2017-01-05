@@ -43,9 +43,32 @@
   }
 }
 
+.hp-hero-header-solid {
+  .inner {
+    background: white;
+    overflow: hidden;
+    width: 0;
+    -moz-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
+    -o-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
+    -ms-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
+    -webkit-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
+    transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
+  }
+
+  svg {
+    width: 1000px;
+  }
+}
+
+
 /* Subhead */
 
 .hp-hero-subhead {
   text-align: center;
   margin: 30px 0 0;
+}
+
+/* Animations */
+div.solid-inner.inner.show {
+  width: 100%;
 }
