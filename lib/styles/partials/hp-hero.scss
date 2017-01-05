@@ -16,7 +16,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 55%;
   -moz-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -32,7 +32,7 @@
   height: 0;
 
   h1 {
-    margin: 50px auto;
+    margin: 100px auto;
     width: calc(100vw - 200px);
   }
 }
@@ -82,7 +82,7 @@
 
 .hp-hero-subhead {
   text-align: center;
-  margin: 30px 0 0;
+  margin: 5px 0 0;
   opacity: 0;
 }
 
