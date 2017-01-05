@@ -1,0 +1,157 @@
+/* Main Container */
+.hp-hero-main {
+  width: 100%;
+}
+
+.hp-hero-masthead {
+  min-height: 800px;
+  height: 100vh;
+  position: relative;
+  margin-top: -147px;
+  z-index: 1;
+}
+
+.hp-hero-masthead-inner {
+  padding: 0 33px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55%;
+  -moz-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+/* MastHead */
+
+.hp-hero-header-container {
+  padding-top: 20%;
+  position: relative;
+  height: 0;
+
+  h1 {
+    margin: 100px auto;
+    width: calc(100vw - 200px);
+  }
+}
+
+.hp-hero-header-solid, .hp-hero-header-border {
+  left: 50%;
+  position: absolute;
+  width: calc(100vw - 200px);
+  height: auto;
+  top: 0;
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.hp-hero-header-solid {
+  .inner {
+    background: white;
+    overflow: hidden;
+    width: 0;
+  }
+
+  svg {
+    height: auto;
+    width: calc(100vw - 200px);
+  }
+}
+
+.hp-hero-header-border {
+  path {
+    stroke: #000;
+    stroke-width: 1px;
+    fill: none;
+    fill-rule: evenodd;
+    opacity: 0;
+  }
+
+  svg {
+    width: calc(100vw - 200px);
+  }
+}
+
+
+/* Subhead */
+
+.hp-hero-subhead {
+  text-align: center;
+  margin: 5px 0 0;
+  opacity: 0;
+}
+
+/* Scroll Down */
+
+.hp-hero-scroll {
+  bottom: -7%;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+/* Animations */
+
+path#we-are-masv.desktop-hp-heading {
+  animation: dash 0.8s ease-in 0ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-1.desktop-hp-heading {
+  animation: dash 0.8s ease-in 15ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-2.desktop-hp-heading {
+  animation: dash 0.8s ease-in 30ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-3.desktop-hp-heading {
+  stroke-dasharray: 607, 607;
+  animation: dash 0.8s ease-in 45ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-4.desktop-hp-heading {
+  animation: dash 0.8s ease-in 60ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-5.desktop-hp-heading {
+  animation: dash 0.8s ease-in 75ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-6.desktop-hp-heading {
+  animation: dash 0.8s ease-in 100ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-7.desktop-hp-heading {
+  animation: dash 0.8s ease-in 115ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-8.desktop-hp-heading {
+  animation: dash 0.8s ease-in 130ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    opacity: 1;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 0;
+  }
+}

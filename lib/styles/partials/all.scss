@@ -1,18 +1,5 @@
-body {
-  background: aqua;
-}
-
-nav {
-  background: purple;
-  height: 50px;
-  color: magenta;
-  widows: 100px;
-}
-
-.red {
-  background: red;
-}
-
-.clicked {
-  background: green;
-}
+@import 'typography.scss';
+@import 'buttons.scss';
+@import 'base.scss';
+@import 'header-nav.scss';
+@import 'hp-hero.scss';
