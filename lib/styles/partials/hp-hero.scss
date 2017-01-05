@@ -48,6 +48,9 @@
     background: white;
     overflow: hidden;
     width: 0;
+    animation: fill 0.7s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
     -moz-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
     -o-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
     -ms-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
@@ -66,6 +69,7 @@
     stroke-width: 1px;
     fill: none;
     fill-rule: evenodd;
+    opacity: 0;
   }
 }
 
@@ -79,6 +83,70 @@
 
 /* Animations */
 
-div.solid-inner.inner.show {
-  width: 100%;
+@keyframes fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+path#we-are-masv.desktop-hp-heading {
+  animation: dash 0.8s ease-in 0ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-1.desktop-hp-heading {
+  animation: dash 0.8s ease-in 15ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-2.desktop-hp-heading {
+  animation: dash 0.8s ease-in 30ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-3.desktop-hp-heading {
+  stroke-dasharray: 607, 607;
+  animation: dash 0.8s ease-in 45ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-4.desktop-hp-heading {
+  animation: dash 0.8s ease-in 60ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-5.desktop-hp-heading {
+  animation: dash 0.8s ease-in 75ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-6.desktop-hp-heading {
+  animation: dash 0.8s ease-in 100ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-7.desktop-hp-heading {
+  animation: dash 0.8s ease-in 115ms;
+  animation-fill-mode: forwards;
+}
+
+path#we-are-masv-8.desktop-hp-heading {
+  animation: dash 0.8s ease-in 130ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    opacity: 1;
+    stroke-dasharray: 800, 800;
+    stroke-dashoffset: 0;
+  }
 }
