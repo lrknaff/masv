@@ -12,7 +12,7 @@
 }
 
 .hp-hero-masthead-inner {
-  margin: 0 33px;
+  padding: 0 33px;
   position: absolute;
   left: 0;
   right: 0;
@@ -30,12 +30,17 @@
   padding-top: 20%;
   position: relative;
   height: 0;
+
+  h1 {
+    margin: 50px auto;
+    width: calc(100vw - 200px);
+  }
 }
 
 .hp-hero-header-solid, .hp-hero-header-border {
   left: 50%;
   position: absolute;
-  width: 100%;
+  width: calc(100vw - 200px);
   height: auto;
   top: 0;
   -moz-transform: translate(-50%, 0);
@@ -92,9 +97,10 @@ div.inner.show {
 /* Scroll Down */
 
 .hp-hero-scroll {
-  margin: 0 auto;
-  position: relative;
-  width: 100px;
+  bottom: 8%;
+  left: 0;
+  right: 0;
+  position: absolute;
 }
 
 /* Animations */
@@ -156,8 +162,4 @@ path#we-are-masv-8.desktop-hp-heading {
     stroke-dasharray: 800, 800;
     stroke-dashoffset: 0;
   }
-}
-
-.test {
-  width: 100%;
 }
