@@ -68,9 +68,9 @@
   }
 }
 
-div.inner.show {
-  width: 100%;
-}
+// div.inner.show {
+//   width: 100%;
+// }
 
 .hp-hero-header-border {
   path {
@@ -92,6 +92,7 @@ div.inner.show {
 .hp-hero-subhead {
   text-align: center;
   margin: 30px 0 0;
+  opacity: 0;
 }
 
 /* Scroll Down */
