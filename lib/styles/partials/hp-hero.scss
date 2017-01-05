@@ -55,11 +55,6 @@
     background: white;
     overflow: hidden;
     width: 0;
-    -moz-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
-    -o-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
-    -ms-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
-    -webkit-transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
-    transition: all 0.8s cubic-bezier(0.63, 0.29, 0.17, 1.245);
   }
 
   svg {
@@ -67,10 +62,6 @@
     width: calc(100vw - 200px);
   }
 }
-
-// div.inner.show {
-//   width: 100%;
-// }
 
 .hp-hero-header-border {
   path {
