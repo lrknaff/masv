@@ -39,7 +39,7 @@
 
   .inner {
     position: relative;
-    top: 25%;
+    top: 15%;
   }
 }
 
@@ -60,6 +60,15 @@
   }
 }
 
+.hp-hero-header-border {
+  path {
+    stroke: #000;
+    stroke-width: 1px;
+    fill: none;
+    fill-rule: evenodd;
+  }
+}
+
 
 /* Subhead */
 
@@ -69,6 +78,7 @@
 }
 
 /* Animations */
+
 div.solid-inner.inner.show {
   width: 100%;
 }
