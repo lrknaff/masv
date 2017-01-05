@@ -27,19 +27,25 @@
 
 .hp-hero-header-container {
   position: relative;
-  height: 200px;
+  height: 225px;
 }
 
 .hp-hero-header-solid, .hp-hero-header-border {
   position: absolute;
   left: 50%;
-  margin-left: -(1180px / 2px);
-  width: 1120px;
+  margin-left: -(1000px / 2px);
+  width: 1000px;
   height: 260px;
+
+  .inner {
+    position: relative;
+    top: 25%;
+  }
 }
 
 /* Subhead */
 
 .hp-hero-subhead {
   text-align: center;
+  margin: 30px 0 0;
 }
