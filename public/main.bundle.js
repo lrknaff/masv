@@ -8204,40 +8204,16 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// logo hover effect
+	//loading animation
 	
-	(0, _jquery2.default)('.header-logo-small').hover(function () {
-	  (0, _jquery2.default)(this).toggleClass('hover');
-	
-	  _gsap.TweenMax.staggerFromTo(".hover path", 0.7, {
-	    y: "+=100",
-	    opacity: 0
-	  }, {
-	    y: "-=100",
-	    opacity: 1
-	  }, 0.2);
-	});
-	
-	//event listener for scroll
-	
-	window.addEventListener('scroll', function (e) {
-	  debugger;
-	  var windowHeight = (0, _jquery2.default)(window).height();
-	  var scrollPosition = (0, _jquery2.default)(window).scrollTop();
-	  var aboutPosition = (0, _jquery2.default)('.hp-about-copy').offset().top;
-	
-	  window.requestAnimationFrame(function () {
-	    if (aboutPosition < windowHeight) {
-	      (0, _jquery2.default)('.backgrounds-aboutus').css('opacity', 1);
-	    } else {
-	      (0, _jquery2.default)('.backgrounds-aboutus').css('opacity', 0);
-	    }
-	    // console.log($('.hp-about-copy').offset().top);
-	    // console.log(scrollPosition);
+	// //scroll to top on page reload
+	(0, _jquery2.default)(document).ready(function () {
+	  (0, _jquery2.default)('html, body').animate({
+	    scrollTop: 0
 	  });
 	});
 	
-	//hp-hero
+	//hp-hero animation on load
 	
 	_gsap.TweenMax.to(".gsap-animate-fade-down", 0.5, {
 	  opacity: 1,
@@ -8267,6 +8243,80 @@
 	  onRepeat: _gsap.onRepeat,
 	  ease: _gsap.Bounce,
 	  delay: 2
+	});
+	
+	// logo hover effect
+	
+	(0, _jquery2.default)('.header-logo-small').hover(function () {
+	  (0, _jquery2.default)(this).toggleClass('hover');
+	
+	  _gsap.TweenMax.staggerFromTo(".hover path", 0.7, {
+	    y: "+=100",
+	    opacity: 0
+	  }, {
+	    y: "-=100",
+	    opacity: 1
+	  }, 0.2);
+	});
+	
+	//event listener for scroll
+	
+	window.addEventListener('scroll', function (e) {
+	  var windowHeight = window.innerHeight,
+	      scrollPosition = (0, _jquery2.default)(this).scrollTop(),
+	      aboutPosition = (0, _jquery2.default)('.hp-about-copy').offset().top,
+	      distance = aboutPosition -= scrollPosition;
+	
+	  function scrollEvent() {
+	    if (distance <= 275) {
+	      _gsap.TweenMax.to([".backgrounds-hphero", ".hp-hero-main", "nav"], 0.12, {
+	        opacity: 0,
+	        ease: _gsap.Power2.easeOut
+	      });
+	      _gsap.TweenMax.to(".backgrounds-aboutus", 0.2, {
+	        opacity: 1,
+	        ease: _gsap.Power2.easeIn,
+	        delay: 0.7
+	      });
+	      _gsap.TweenMax.to(".header-logo-small", 0.2, {
+	        fill: 'white',
+	        ease: _gsap.Power2.easeIn,
+	        delay: 0.12
+	      });
+	    } else if (distance > 275) {
+	      _gsap.TweenMax.to(".backgrounds-aboutus", 0.12, {
+	        opacity: 0,
+	        ease: _gsap.Power2.easeOut
+	      });
+	      _gsap.TweenMax.to(".header-logo-small", 0.2, {
+	        fill: 'black',
+	        ease: _gsap.Power2.easeIn
+	      });
+	      _gsap.TweenMax.to([".backgrounds-hphero", ".hp-hero-main", "nav"], 0.2, {
+	        opacity: 1,
+	        ease: _gsap.Power2.easeIn,
+	        delay: 0.7
+	      });
+	    }
+	  }
+	
+	  requestAnimationFrame(scrollEvent);
+	});
+	
+	//scroll to position
+	
+	(0, _jquery2.default)('.nav-li-about').on('click', function (e) {
+	  e.preventDefault;
+	  (0, _jquery2.default)('html, body').animate({
+	    scrollTop: (0, _jquery2.default)(".hp-about-copy").offset().top
+	  });
+	});
+	
+	(0, _jquery2.default)('.header-logo-small').on('click', function (e) {
+	  e.preventDefault;
+	  (0, _jquery2.default)('html, body').animate({
+	    scrollTop: 0
+	  });
 	});
 
 /***/ },
@@ -8304,7 +8354,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);", ""]);
 	
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* Fonts */\n/* Colors */\nh3 {\n  letter-spacing: 0.03em;\n  font-size: 1.4em;\n  font-weight: 300; }\n\nh4 {\n  font-weight: 300;\n  font-size: 1.5em;\n  line-height: 2em;\n  padding: 200px 0; }\n\na {\n  text-decoration: none; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background: transparent;\n  color: #6B6B6B;\n  font-family: \"Open Sans\", serif;\n  font-weight: 300;\n  font-size: 100%;\n  line-height: 1.4;\n  text-align: center; }\n\nmain {\n  width: 100vw; }\n\nheader {\n  padding: 30px 0 0;\n  text-align: left;\n  opacity: 0;\n  z-index: 999;\n  position: fixed;\n  width: 100%;\n  top: 0; }\n\n.header-logo-small {\n  padding-left: 80px;\n  float: left;\n  cursor: pointer; }\n  .header-logo-small svg {\n    width: 45px; }\n\nnav {\n  float: right;\n  padding-right: 80px; }\n  nav ul {\n    display: inline-block; }\n  nav li {\n    display: inline-block;\n    cursor: pointer;\n    margin: 20px 0 0 25px;\n    text-align: right;\n    text-transform: uppercase;\n    top: 11px; }\n\n/* Main Container */\n.hp-hero-main {\n  width: 100%; }\n\n.hp-hero-masthead {\n  min-height: 800px;\n  height: 100vh;\n  position: relative;\n  margin-top: -147px;\n  z-index: 1; }\n\n.hp-hero-masthead-inner {\n  padding: 0 33px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 55%;\n  -moz-transform: translate(0, -50%);\n  -o-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%); }\n\n/* MastHead */\n.hp-hero-header-container {\n  padding-top: 20%;\n  position: relative;\n  height: 0; }\n  .hp-hero-header-container h1 {\n    margin: 100px auto;\n    width: calc(100vw - 200px); }\n\n.hp-hero-header-solid, .hp-hero-header-border {\n  left: 50%;\n  position: absolute;\n  width: calc(100vw - 200px);\n  height: auto;\n  top: 0;\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  -ms-transform: translate(-50%, 0);\n  -webkit-transform: translate(-50%, 0);\n  transform: translate(-50%, 0); }\n\n.hp-hero-header-solid .inner {\n  background: white;\n  overflow: hidden;\n  width: 0; }\n\n.hp-hero-header-solid svg {\n  height: auto;\n  width: calc(100vw - 200px); }\n\n.hp-hero-header-border path {\n  stroke: #000;\n  stroke-width: 1px;\n  fill: none;\n  fill-rule: evenodd;\n  opacity: 0; }\n\n.hp-hero-header-border svg {\n  width: calc(100vw - 200px); }\n\n/* Subhead */\n.hp-hero-subhead {\n  text-align: center;\n  margin: 5px 0 0;\n  opacity: 0; }\n\n/* Scroll Down */\n.hp-hero-scroll {\n  bottom: -7%;\n  left: 0;\n  right: 0;\n  position: fixed; }\n\n/* Animations */\npath#we-are-masv.desktop-hp-heading {\n  animation: dash 0.8s ease-in 0ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-1.desktop-hp-heading {\n  animation: dash 0.8s ease-in 15ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-2.desktop-hp-heading {\n  animation: dash 0.8s ease-in 30ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-3.desktop-hp-heading {\n  stroke-dasharray: 607, 607;\n  animation: dash 0.8s ease-in 45ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-4.desktop-hp-heading {\n  animation: dash 0.8s ease-in 60ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-5.desktop-hp-heading {\n  animation: dash 0.8s ease-in 75ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-6.desktop-hp-heading {\n  animation: dash 0.8s ease-in 100ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-7.desktop-hp-heading {\n  animation: dash 0.8s ease-in 115ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-8.desktop-hp-heading {\n  animation: dash 0.8s ease-in 130ms;\n  animation-fill-mode: forwards; }\n\n@keyframes dash {\n  from {\n    opacity: 0;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 1000; }\n  to {\n    opacity: 1;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 0; } }\n\n.backgrounds-aboutus {\n  background-image: url(\"https://daks2k3a4ib2z.cloudfront.net/56d8a8f1100bc1bb7928eebd/5840702431fc8b01783c6c2a_bg-home-aboutus.jpg\");\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  display: block;\n  opacity: 0; }\n\n.hp-about {\n  background: black;\n  color: white;\n  width: 100%;\n  text-align: center;\n  padding: 100px 5%;\n  margin-left: 0;\n  margin-right: 0; }\n  .hp-about h4 {\n    position: relative;\n    margin: 0 auto;\n    width: 85%; }\n    .hp-about h4 span {\n      font-weight: 700; }\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* Fonts */\n/* Colors */\nh3 {\n  letter-spacing: 0.03em;\n  font-size: 1.4em;\n  font-weight: 300; }\n\nh4 {\n  font-weight: 300;\n  font-size: 1.5em;\n  line-height: 2em;\n  padding: 200px 0; }\n\na {\n  color: black;\n  text-decoration: none;\n  font-weight: 700; }\n\n.backgrounds-hphero {\n  background: white;\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 0;\n  display: block;\n  opacity: 1; }\n\n.backgrounds-aboutus {\n  background-image: url(\"https://daks2k3a4ib2z.cloudfront.net/56d8a8f1100bc1bb7928eebd/5840702431fc8b01783c6c2a_bg-home-aboutus.jpg\");\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  display: block;\n  opacity: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background: transparent;\n  color: #6B6B6B;\n  font-family: \"Open Sans\", serif;\n  font-weight: 300;\n  font-size: 100%;\n  line-height: 1.4;\n  text-align: center; }\n\nmain {\n  width: 100vw; }\n\nheader {\n  padding: 30px 0 0;\n  text-align: left;\n  opacity: 0;\n  z-index: 999;\n  position: fixed;\n  width: 100%;\n  top: 0; }\n\n.header-logo-small {\n  padding-left: 80px;\n  float: left;\n  cursor: pointer; }\n  .header-logo-small svg {\n    width: 45px; }\n\nnav {\n  float: right;\n  padding-right: 80px; }\n  nav ul {\n    display: inline-block; }\n  nav li {\n    display: inline-block;\n    cursor: pointer;\n    margin: 20px 0 0 25px;\n    text-align: right;\n    text-transform: uppercase;\n    top: 11px; }\n\n/* Main Container */\n.hp-hero-main {\n  width: 100%; }\n\n.hp-hero-masthead {\n  min-height: 800px;\n  height: 100vh;\n  position: relative;\n  margin-top: -147px;\n  z-index: 1; }\n\n.hp-hero-masthead-inner {\n  padding: 0 33px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 55%;\n  -moz-transform: translate(0, -50%);\n  -o-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%); }\n\n/* MastHead */\n.hp-hero-header-container {\n  padding-top: 20%;\n  position: relative;\n  height: 0; }\n  .hp-hero-header-container h1 {\n    margin: 100px auto;\n    width: calc(100vw - 200px); }\n\n.hp-hero-header-solid, .hp-hero-header-border {\n  left: 50%;\n  position: absolute;\n  width: calc(100vw - 200px);\n  height: auto;\n  top: 0;\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  -ms-transform: translate(-50%, 0);\n  -webkit-transform: translate(-50%, 0);\n  transform: translate(-50%, 0); }\n\n.hp-hero-header-solid .inner {\n  background: white;\n  overflow: hidden;\n  width: 0; }\n\n.hp-hero-header-solid svg {\n  height: auto;\n  width: calc(100vw - 200px); }\n\n.hp-hero-header-border path {\n  stroke: #000;\n  stroke-width: 1px;\n  fill: none;\n  fill-rule: evenodd;\n  opacity: 0; }\n\n.hp-hero-header-border svg {\n  width: calc(100vw - 200px); }\n\n/* Subhead */\n.hp-hero-subhead {\n  text-align: center;\n  margin: 5px 0 0;\n  opacity: 0; }\n\n/* Scroll Down */\n.hp-hero-scroll {\n  bottom: -7%;\n  left: 0;\n  right: 0;\n  position: fixed; }\n\n/* Animations */\npath#we-are-masv.desktop-hp-heading {\n  animation: dash 0.8s ease-in 0ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-1.desktop-hp-heading {\n  animation: dash 0.8s ease-in 15ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-2.desktop-hp-heading {\n  animation: dash 0.8s ease-in 30ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-3.desktop-hp-heading {\n  stroke-dasharray: 607, 607;\n  animation: dash 0.8s ease-in 45ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-4.desktop-hp-heading {\n  animation: dash 0.8s ease-in 60ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-5.desktop-hp-heading {\n  animation: dash 0.8s ease-in 75ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-6.desktop-hp-heading {\n  animation: dash 0.8s ease-in 100ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-7.desktop-hp-heading {\n  animation: dash 0.8s ease-in 115ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-8.desktop-hp-heading {\n  animation: dash 0.8s ease-in 130ms;\n  animation-fill-mode: forwards; }\n\n@keyframes dash {\n  from {\n    opacity: 0;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 1000; }\n  to {\n    opacity: 1;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 0; } }\n\n.hp-about {\n  color: white;\n  width: 100%;\n  text-align: center;\n  padding: 100px 5%;\n  margin-left: 0;\n  margin-right: 0; }\n  .hp-about h4 {\n    position: relative;\n    margin: 0 auto;\n    width: 85%; }\n    .hp-about h4 span {\n      font-weight: 700; }\n", ""]);
 	
 	// exports
 
