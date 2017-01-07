@@ -1,5 +1,7 @@
 const path = require('path');
+var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var $ = require('jquery');
 
 module.exports = {
   entry: {
@@ -34,8 +36,27 @@ module.exports = {
 devtool: 'source-map',
 resolve: {
   extensions: ['', '.js', '.json', '.scss', '.css'],
+  root: path.resolve('./node_modules'),
+  alias: {
+    "TweenLite": path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+    "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+    "TimelineLite": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+    "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+    "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+    "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+    "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+  }
 },
+paths: {
+  'TweenLite': path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+  'TweenMax': path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+   'TimelineLite': path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+   'TimelineMax': path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+   'ScrollMagic': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+   'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+   'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+    },
 plugins: [
-      new ExtractTextPlugin("[name].css")
+      new ExtractTextPlugin("[name].css"),
   ]
 };
