@@ -1,17 +1,19 @@
 const path = require('path');
-var webpack = require('webpack');
+var Webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var $ = require('jquery');
 
 module.exports = {
   entry: {
-    main: ['babel-polyfill', './lib/index.js'],
+    hpEntry: ['babel-polyfill', './lib/HpIndex.js'],
+    projectEntry: ['babel-polyfill', './lib/ProjectIndex.js'],
     test: "mocha!./test/index.js"
   },
   output: {
     path: path.join(__dirname, 'public'),
     publicPath: '/public/',
     filename: '[name].bundle.js',
+    hot: true
   },
   module: {
   loaders: [
@@ -34,7 +36,8 @@ module.exports = {
   ],
 },
 plugins: [
-      new ExtractTextPlugin("[name].scss"),
+      new ExtractTextPlugin("index.scss"),
+      new Webpack.HotModuleReplacementPlugin()
   ],
 devtool: 'source-map',
 resolve: {
