@@ -22,6 +22,3 @@ app.use('/projects/:name', express.static(path.join(__dirname, 'projects')));
 app.listen(port, function () {
   console.log('Server running on port ' + port);
 });
-
-//const params = window.location.pathname.split("/")[2]
-//const project = obj[params]
