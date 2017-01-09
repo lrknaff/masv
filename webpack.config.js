@@ -1,9 +1,14 @@
 const path = require('path');
-var Webpack = require('webpack');
+var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var $ = require('jquery');
+var webpackMiddleware = require("webpack-dev-middleware");
+var webpackHotMiddleware = require('webpack-hot-middleware');
 
 module.exports = {
+  entry : [
+    'webpack-hot-middleware/client'
+  ],
   entry: {
     hpEntry: ['babel-polyfill', './lib/HpIndex.js'],
     projectEntry: ['babel-polyfill', './lib/ProjectIndex.js'],
@@ -37,7 +42,9 @@ module.exports = {
 },
 plugins: [
       new ExtractTextPlugin("index.scss"),
-      new Webpack.HotModuleReplacementPlugin()
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
   ],
 devtool: 'source-map',
 resolve: {
