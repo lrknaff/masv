@@ -67,44 +67,64 @@ describe('masv navigation', function() {
     it('should scroll to the about section when the user clicks about', function () {
       browser.click('.nav-li-about');
 
-      var position = browser.windowHandlePosition();
-
-      console.log(position);
-      // assert.equal(position, 45);
+      assert.equal(browser.getUrl(), 'http://localhost:3000/#about');
+      assert.equal(browser.isVisibleWithinViewport('.hp-about-copy'), true);
     });
 
     it('should scroll to the services section when the user clicks services', function () {
+      browser.scroll(0,0);
+      browser.click('.nav-li-portfolio');
 
+      assert.equal(browser.getUrl(), 'http://localhost:3000/#portfolio');
+      assert.equal(browser.isVisibleWithinViewport('.hp-portfolio'), true);
     });
 
     it('should scroll to the contact section when the user clicks contact', function() {
+      browser.scroll(0,0);
+      browser.click('.nav-li-contact');
 
-    });
-
-    it('should disapear when the use scrolls past 50px', function () {
-
+      assert.equal(browser.getUrl(), 'http://localhost:3000/#contact');
+      assert.equal(browser.isVisibleWithinViewport('.hp-contact'), true);
     });
 });
 
 describe('masv about page', function() {
     it('should have a background with a pattern', function () {
+      browser.url('/');
+      browser.click('.nav-li-about');
+      browser.waitForVisible('.hp-about-copy');
 
+      var background = browser.element('.backgrounds-aboutus');
+      var image = background.getCssProperty('opacity').parsed.value;
+
+      assert.equal(image, 1);
     });
 
     it('should have and about us section', function () {
+      var aboutSection = browser.element('.hp-about');
 
+      assert.equal(aboutSection.isExisting(), true);
     });
 
     it('should have 3 services', function () {
+      var service1 = browser.element('.services-li-branding');
+      var service2 = browser.element('.services-li-solutions');
+      var service3 = browser.element('.services-li-illustration');
 
-    });
-
-    it('should not show the nav or scroll', function () {
-
+      assert.equal(service1.isExisting(), true);
+      assert.equal(service2.isExisting(), true);
+      assert.equal(service3.isExisting(), true);
     });
 
     it('should have a white logo', function() {
+      browser.url('/');
+      browser.click('.nav-li-about');
+      browser.waitForVisible('.hp-about-copy');
 
+      var logo = browser.element('a.header-logo-small');
+      var color = logo.getCssProperty('fill').parsed.hex;
+
+      assert.equal(color, '#ffffff');
     });
 });
 
