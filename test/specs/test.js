@@ -6,7 +6,7 @@ var $ = require('jquery');
 
 
 describe('masv homepage', function() {
-    this.timeout(10000);
+    this.timeout(50000);
     it('should have the right title', function () {
         browser.url('/');
         var title = browser.getTitle();
@@ -160,6 +160,7 @@ describe('masv projects page', function() {
 describe('masv contact page', function() {
   it('should display contact copy', function() {
     browser.url('/');
+    browser.timeouts('page load', 1000);
     var contact = browser.element('.hp-contact-container');
 
     assert.equal(contact.isExisting(), true);
@@ -177,7 +178,7 @@ describe('masv contact page', function() {
 
   it('should have a black background', function() {
     browser.element('.hp-contact-container').scroll();
-    browser.waitForVisible('.hp-contact-container');
+    browser.waitForVisible('footer', 1000);
 
     var background = browser.element('.backgrounds-hphero');
     var color = background.getCssProperty('color').parsed.hex;
@@ -186,6 +187,9 @@ describe('masv contact page', function() {
   });
 
   it('should have a white logo', function() {
+
+    console.log(browser.element('a.header-logo-small').getCssProperty('fill').parsed.hex);
+
     var logo = browser.element('a.header-logo-small');
     var color = logo.getCssProperty('fill').parsed.hex;
 
