@@ -130,44 +130,65 @@ describe('masv about page', function() {
 
 describe('masv projects page', function() {
     it('should have a white background', function () {
+      browser.element('.hp-portfolio-left').scroll();
+      browser.waitForVisible('.hp-portfolio-container');
 
+      var background = browser.element('.backgrounds-aboutus');
+      var image = background.getCssProperty('opacity').parsed.value;
+
+      assert.equal(image, 0);
     });
 
     it('should display 4 projects', function () {
 
     });
 
-    it('should have 3 services', function () {
-
-    });
-
-    it('should not show the nav or scroll', function () {
-
-    });
-
     it('should have a black logo', function() {
+      var logo = browser.element('a.header-logo-small');
+      var color = logo.getCssProperty('fill').parsed.hex;
 
+      assert.equal(color, '#000000');
     });
 
     it('should click to individual projects', function() {
+      browser.click('.cinebody');
 
+      assert.equal(browser.getUrl(), 'http://localhost:3000/projects/Cinebody/');
     });
 });
 
 describe('masv contact page', function() {
   it('should display contact copy', function() {
+    browser.url('/');
+    var contact = browser.element('.hp-contact-container');
+
+    assert.equal(contact.isExisting(), true);
+  });
+
+  it('should have a link that opens up email', function() {
 
   });
-  it('should have a link that open up email', function() {
 
-  });
   it('should have a footer', function() {
+    var footer = browser.element('footer');
 
+    assert.equal(footer.isExisting(), true);
   });
+
   it('should have a black background', function() {
+    browser.element('.hp-contact-container').scroll();
+    browser.waitForVisible('.hp-contact-container');
 
+    var background = browser.element('.backgrounds-hphero');
+    var color = background.getCssProperty('color').parsed.hex;
+
+    assert.equal(color, '#000000');
   });
-  it('should have a white logo', function() {
 
+  it('should have a white logo', function() {
+    var logo = browser.element('a.header-logo-small');
+    var color = logo.getCssProperty('fill').parsed.hex;
+
+    assert.equal(color, '#ffffff');
   });
 });
