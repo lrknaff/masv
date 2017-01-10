@@ -20,8 +20,19 @@ describe('masv homepage', function() {
       assert.equal(color, '#ffffff');
     });
 
+    it('should have a masthead', function () {
+      var masthead = browser.element('.hp-hero-masthead');
 
-    it('should have a subhead', function () {
+      assert.equal(masthead.isExisting(), true);
+    });
+
+    it('should have a scroll ui', function () {
+      var scroll = browser.element('.hp-hero-scroll');
+
+      assert.equal(scroll.isExisting(), true);
+    });
+
+    it('should have a subhead with the correct copy', function () {
       var subhead = browser.getText('h3');
 
       assert.equal(subhead, 'branding, identity, creative design, custom illustration');
@@ -47,12 +58,19 @@ describe('masv homepage', function() {
 });
 
 describe('masv navigation', function() {
-    it('should have 3 links', function () {
+    it('should have a navigation', function () {
+      var nav = browser.element('.backgrounds-hphero');
 
+      assert.equal(nav.isExisting(), true);
     });
 
     it('should scroll to the about section when the user clicks about', function () {
+      browser.click('.nav-li-about');
 
+      var position = browser.windowHandlePosition();
+
+      console.log(position);
+      // assert.equal(position, 45);
     });
 
     it('should scroll to the services section when the user clicks services', function () {
