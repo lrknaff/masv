@@ -2,16 +2,23 @@ const path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var $ = require('jquery');
+var webpackMiddleware = require("webpack-dev-middleware");
+var webpackHotMiddleware = require('webpack-hot-middleware');
 
 module.exports = {
+  entry : [
+    'webpack-hot-middleware/client'
+  ],
   entry: {
-    main: ['babel-polyfill', './lib/index.js'],
+    hpEntry: ['babel-polyfill', './lib/HpIndex.js'],
+    projectEntry: ['babel-polyfill', './lib/ProjectIndex.js'],
     test: "mocha!./test/index.js"
   },
   output: {
     path: path.join(__dirname, 'public'),
     publicPath: '/public/',
     filename: '[name].bundle.js',
+    hot: true
   },
   module: {
   loaders: [
@@ -33,6 +40,12 @@ module.exports = {
     },
   ],
 },
+plugins: [
+      new ExtractTextPlugin("index.scss"),
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+  ],
 devtool: 'source-map',
 resolve: {
   extensions: ['', '.js', '.json', '.scss', '.css'],
@@ -55,8 +68,5 @@ paths: {
    'ScrollMagic': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
    'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
    'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-    },
-plugins: [
-      new ExtractTextPlugin("[name].css"),
-  ]
+    }
 };
