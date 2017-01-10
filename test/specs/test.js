@@ -6,6 +6,7 @@ var $ = require('jquery');
 
 
 describe('masv homepage', function() {
+    this.timeout(10000);
     it('should have the right title', function () {
         browser.url('/');
         var title = browser.getTitle();
@@ -13,33 +14,34 @@ describe('masv homepage', function() {
     });
 
     it('should have a white background', function () {
-      browser.url('/');
-
       var background = browser.element('.backgrounds-hphero');
       var color = background.getCssProperty('background-color').parsed.hex;
-
-      console.log(color)
 
       assert.equal(color, '#ffffff');
     });
 
-    it('should have a masthead', function () {
-
-    });
 
     it('should have a subhead', function () {
+      var subhead = browser.getText('h3');
 
+      assert.equal(subhead, 'branding, identity, creative design, custom illustration');
     });
 
-    it('should have a nav', function () {
-
-    });
 
     it('should have a black logo', function() {
+      var logo = browser.element('.header-logo-small');
+      var color = logo.getCssProperty('background-color').parsed.hex;
 
+      assert.equal(color, '#000000');
     });
 
-    it('should hide the nave and scroll when the user scrolls past 50px', function () {
+    it('should hide the nav and scroll when the user scrolls', function () {
+      browser.scroll(0, 900);
+
+      var nav = browser.element('nav');
+      var opacity = nav.getCssProperty('opacity').parsed.value;
+
+      assert.equal(opacity, 0);
 
     });
 });
@@ -130,4 +132,4 @@ describe('masv contact page', function() {
   it('should have a white logo', function() {
 
   });
-})
+});
