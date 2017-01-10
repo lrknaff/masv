@@ -1,6 +1,8 @@
 var assert = require('assert');
 const webdriver = require('selenium-webdriver');
+const webdriverio = require('webdriverio');
 const test      = require('selenium-webdriver/testing');
+var $ = require('jquery');
 
 
 describe('masv homepage', function() {
@@ -11,7 +13,14 @@ describe('masv homepage', function() {
     });
 
     it('should have a white background', function () {
+      browser.url('/');
 
+      var background = browser.element('.backgrounds-hphero');
+      var color = background.getCssProperty('background-color').parsed.hex;
+
+      console.log(color)
+
+      assert.equal(color, '#ffffff');
     });
 
     it('should have a masthead', function () {
