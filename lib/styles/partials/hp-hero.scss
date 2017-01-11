@@ -16,7 +16,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 55%;
+  top: 57%;
   -moz-transform: translate(0, -50%);
   -o-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -69,7 +69,6 @@
     stroke-width: 1px;
     fill: none;
     fill-rule: evenodd;
-    opacity: 0;
   }
 
   svg {
@@ -89,10 +88,10 @@
 /* Scroll Down */
 
 .hp-hero-scroll {
-  bottom: -7%;
+  top: 90%;
   left: 0;
   right: 0;
-  position: fixed;
+  position: absolute;
 
   svg {
     animation: bounce 0.8s ease-in;
@@ -102,62 +101,62 @@
 }
 
 /* Animations */
-
 path#we-are-masv.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 0ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 284.43;
+  stroke-dashoffset: 284.43;
+  animation: dash 0.8s ease-in 0ms;
 }
 
 path#we-are-masv-1.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 15ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 229.88;
+  stroke-dashoffset: 229.88;
+  animation: dash 0.8s ease-in 15ms;
 }
 
 path#we-are-masv-2.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 30ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 240.94;
+  stroke-dashoffset: 240.94;
+  animation: dash 0.8s ease-in 30ms;
 }
 
 path#we-are-masv-3.desktop-hp-heading {
-  stroke-dasharray: 607, 607;
-  animation: dash 0.8s ease-in-out 45ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 160.18;
+  stroke-dashoffset: 160.18;
+  animation: dash 0.8s ease-in 45ms;
 }
 
 path#we-are-masv-4.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 60ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 229.88;
+  stroke-dashoffset: 229.88;
+  animation: dash 0.8s ease-in 60ms;
 }
 
 path#we-are-masv-5.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 75ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 350.72;
+  stroke-dashoffset: 350.72;
+  animation: dash 0.8s ease-in 85ms;
 }
 
 path#we-are-masv-6.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 100ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 240.94;
+  stroke-dashoffset: 240.94;
+  animation: dash 0.8s ease-in 100ms;
 }
 
 path#we-are-masv-7.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 115ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 225.16;
+  stroke-dashoffset: 225.16;
+  animation: dash 0.8s ease-in 115ms;
 }
 
 path#we-are-masv-8.desktop-hp-heading {
-  animation: dash 0.8s ease-in-out 130ms;
-  animation-fill-mode: forwards;
+  stroke-dasharray: 195.5;
+  stroke-dashoffset: 195.5;
+  animation: dash 0.8s ease-in 130ms;
 }
 
 @keyframes dash {
-  from {
-    opacity: 0;
-    stroke-dasharray: 800, 800;
-    stroke-dashoffset: 1000;
-  }
   to {
-    opacity: 1;
-    stroke-dasharray: 800, 800;
     stroke-dashoffset: 0;
   }
 }
