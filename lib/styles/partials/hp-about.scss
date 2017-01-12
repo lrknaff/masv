@@ -1,5 +1,5 @@
 .hp-about {
-  color: white;
+  color: #efefef;
   width: 100%;
   text-align: center;
   padding: 100px 5% 0;
@@ -11,7 +11,7 @@
     margin: 0 auto;
     width: 75%;
     padding: 175px 0;
-    text-align: left;
+    z-index: 2;
 
     span {
       font-weight: 700;

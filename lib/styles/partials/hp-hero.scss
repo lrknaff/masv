@@ -8,7 +8,7 @@
   height: 100vh;
   position: relative;
   margin-top: -147px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hp-hero-masthead-inner {
@@ -52,7 +52,6 @@
 
 .hp-hero-header-solid {
   .inner {
-    background: white;
     overflow: hidden;
     width: 0;
   }
@@ -88,7 +87,7 @@
 /* Scroll Down */
 
 .hp-hero-scroll {
-  top: 90%;
+  top: 80%;
   left: 0;
   right: 0;
   position: absolute;
