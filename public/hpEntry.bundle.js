@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d7ace4009bd407652c90"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "20c46089502cc87b4f5b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29979,8 +29979,6 @@
 	__webpack_require__(314);
 	
 	__webpack_require__(313);
-	
-	console.log('!!!');
 
 /***/ },
 /* 312 */,
@@ -30106,7 +30104,7 @@
 	    offset: '100vh'
 	  }).setTween(aboutTween).addTo(scrollMagicController);
 	
-	  AboutScene.addIndicators();
+	  // AboutScene.addIndicators();
 	
 	  var projectsTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 0,
@@ -30121,7 +30119,8 @@
 	    offset: '100vh'
 	  }).setTween(projectsTween).addTo(scrollMagicController);
 	
-	  ProjectsScene.addIndicators();
+	  // ProjectsScene.addIndicators();
+	
 	
 	  var contactTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 1,
@@ -30136,7 +30135,7 @@
 	    offset: '100vh'
 	  }).setTween(contactTween).addTo(scrollMagicController);
 	
-	  contactScene.addIndicators();
+	  // contactScene.addIndicators();
 	});
 
 /***/ },

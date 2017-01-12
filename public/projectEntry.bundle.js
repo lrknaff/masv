@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d7ace4009bd407652c90"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "20c46089502cc87b4f5b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -19400,7 +19400,6 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var params = window.location.pathname.split("/")[2];
-	// const project = obj[params];
 	
 	var displayProject = function displayProject(ProjectsLeft, ProjectsRight) {
 	  var params = window.location.pathname.split("/")[2];
