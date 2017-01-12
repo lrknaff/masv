@@ -63,12 +63,50 @@ footer {
   }
 }
 
+@media screen and (max-width: 767px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: .7em;
+    display: block;
+    text-align: left;
+
+    div {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 479px) {
   .hp-contact {
 
     h4 {
       width: 97%;
       font-size: 1.5em;
+    }
+  }
+
+  footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    text-align: left;
+
+    div {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .social {
+    a {
+      padding-left: 0;
+      padding-right: 25px;
     }
   }
 }
