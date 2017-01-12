@@ -31,6 +31,7 @@
     text-align: left;
     padding-top: 100px;
     padding-bottom: 100px;
+    z-index: 9999;
   }
 
   a {
@@ -47,8 +48,27 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: .8em;
+  z-index: 9999;
 
   div {
     display: inline-block;
+  }
+}
+
+.social {
+  z-index: 9999;
+
+  a {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hp-contact {
+
+    h4 {
+      width: 97%;
+      font-size: 1.5em;
+    }
   }
 }

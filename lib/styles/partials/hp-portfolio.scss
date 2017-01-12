@@ -43,6 +43,7 @@
 
   div {
     text-align: left;
+    z-index: 99;
 
     img {
       background: lightgrey;
@@ -67,4 +68,39 @@
       align-items: flex-start;
     }
   }
+}
+
+@media screen and (max-width: 479px) {
+  .hp-portfolio-container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+
+    .hp-portfolio-right {
+      margin-top: 10px;
+    }
+
+    .hp-portfolio-left {
+      margin-bottom: 25px;
+    }
+
+    div {
+
+      img {
+        width: 76vw;
+        height: 97vw;
+      }
+
+      a {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
 }

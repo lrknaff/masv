@@ -198,19 +198,28 @@ path#we-are-masv-8.desktop-hp-heading {
       width: calc(100vw - 75px)
     }
   }
+
   h3 {
     font-size: 1em;
   }
+
   .hp-hero-scroll {
     top: 65%;
   }
+
   header {
     padding: 0;
   }
+
   .hp-hero-masthead-inner {
     top: 50%;
   }
+
   .header-logo-small {
     padding-left: 40px;
+  }
+
+  nav {
+    padding-right: 40px; 
   }
 }
