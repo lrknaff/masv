@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "32abd081908172a1f306"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d7ace4009bd407652c90"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -3061,7 +3061,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);", ""]);
 	
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* Fonts */\n/* Colors */\nh2 {\n  font-size: 1.2em;\n  font-weight: 700;\n  line-height: 1.6em;\n  letter-spacing: 0.03em; }\n\nh3 {\n  letter-spacing: 0.03em;\n  font-size: 1.4em;\n  font-weight: 300; }\n\nh4 {\n  font-weight: 300;\n  font-size: 1.5em;\n  letter-spacing: 0.03em;\n  line-height: 2em; }\n\nh5 {\n  font-weight: 300;\n  letter-spacing: 0.03em; }\n\na {\n  color: black;\n  text-decoration: none;\n  font-weight: 700; }\n\n.backgrounds-hphero {\n  background: white;\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: block;\n  opacity: 1;\n  z-index: -1; }\n\n.backgrounds-aboutus {\n  background-image: url(\"https://daks2k3a4ib2z.cloudfront.net/56d8a8f1100bc1bb7928eebd/5840702431fc8b01783c6c2a_bg-home-aboutus.jpg\");\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  display: block;\n  opacity: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background: transparent;\n  color: #6B6B6B;\n  font-family: \"Open Sans\", serif;\n  font-weight: 300;\n  font-size: 100%;\n  line-height: 1.4;\n  text-align: center; }\n\nmain {\n  width: 100vw; }\n\nheader {\n  padding: 30px 0 0;\n  text-align: left;\n  opacity: 0;\n  z-index: 999;\n  position: fixed;\n  width: 100%;\n  top: 0; }\n\n.header-logo-small {\n  padding-left: 80px;\n  float: left;\n  cursor: pointer; }\n  .header-logo-small svg {\n    width: 45px; }\n\nnav {\n  float: right;\n  padding-right: 80px; }\n  nav ul {\n    display: inline-block; }\n  nav li {\n    display: inline-block;\n    cursor: pointer;\n    margin: 20px 0 0 25px;\n    text-align: right;\n    text-transform: uppercase;\n    top: 11px; }\n\n/* Main Container */\n.hp-hero-main {\n  width: 100%; }\n\n.hp-hero-masthead {\n  min-height: 800px;\n  height: 100vh;\n  position: relative;\n  margin-top: -147px;\n  z-index: 1; }\n\n.hp-hero-masthead-inner {\n  padding: 0 33px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 55%;\n  -moz-transform: translate(0, -50%);\n  -o-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%); }\n\n/* MastHead */\n.hp-hero-header-container {\n  padding-top: 20%;\n  position: relative;\n  height: 0; }\n  .hp-hero-header-container h1 {\n    margin: 100px auto;\n    width: calc(100vw - 200px); }\n\n.hp-hero-header-solid, .hp-hero-header-border {\n  left: 50%;\n  position: absolute;\n  width: calc(100vw - 200px);\n  height: auto;\n  top: 0;\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  -ms-transform: translate(-50%, 0);\n  -webkit-transform: translate(-50%, 0);\n  transform: translate(-50%, 0); }\n\n.hp-hero-header-solid .inner {\n  background: white;\n  overflow: hidden;\n  width: 0; }\n\n.hp-hero-header-solid svg {\n  height: auto;\n  width: calc(100vw - 200px); }\n\n.hp-hero-header-border path {\n  stroke: #000;\n  stroke-width: 1px;\n  fill: none;\n  fill-rule: evenodd;\n  opacity: 0; }\n\n.hp-hero-header-border svg {\n  width: calc(100vw - 200px); }\n\n/* Subhead */\n.hp-hero-subhead {\n  text-align: center;\n  margin: 5px 0 0;\n  opacity: 0; }\n\n/* Scroll Down */\n.hp-hero-scroll {\n  bottom: -7%;\n  left: 0;\n  right: 0;\n  position: fixed; }\n  .hp-hero-scroll svg {\n    animation: bounce 0.8s ease-in;\n    animation-iteration-count: infinite;\n    animation-direction: alternate; }\n\n/* Animations */\npath#we-are-masv.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 0ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-1.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 15ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-2.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 30ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-3.desktop-hp-heading {\n  stroke-dasharray: 607, 607;\n  animation: dash 0.8s ease-in-out 45ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-4.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 60ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-5.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 75ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-6.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 100ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-7.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 115ms;\n  animation-fill-mode: forwards; }\n\npath#we-are-masv-8.desktop-hp-heading {\n  animation: dash 0.8s ease-in-out 130ms;\n  animation-fill-mode: forwards; }\n\n@keyframes dash {\n  from {\n    opacity: 0;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 1000; }\n  to {\n    opacity: 1;\n    stroke-dasharray: 800, 800;\n    stroke-dashoffset: 0; } }\n\n@keyframes bounce {\n  from {\n    transform: translateX(0px) translateY(-5px); }\n  to {\n    transform: translateX(0px) translateY(0px); } }\n\n.hp-about {\n  color: white;\n  width: 100%;\n  text-align: center;\n  padding: 100px 5% 0;\n  margin-left: 0;\n  margin-right: 0; }\n  .hp-about h4 {\n    position: relative;\n    margin: 0 auto;\n    width: 75%;\n    padding: 175px 0;\n    text-align: left; }\n    .hp-about h4 span {\n      font-weight: 700; }\n\n.hp-services {\n  color: white;\n  padding-bottom: 175px; }\n  .hp-services li {\n    display: inline-block;\n    margin: 35px; }\n  .hp-services div {\n    height: 150px; }\n  .hp-services h2 {\n    margin-top: 10px; }\n\n.branding {\n  background: url(" + __webpack_require__(302) + ") no-repeat; }\n\n.solutions {\n  background: url(" + __webpack_require__(304) + ") no-repeat; }\n\n.illustration {\n  background: url(" + __webpack_require__(303) + ") no-repeat; }\n\n.branding, .solutions, .illustration {\n  background-position: center; }\n\n.hp-portfolio {\n  width: 100%;\n  color: black;\n  text-align: center;\n  padding: 100px 5% 0;\n  margin-left: 0;\n  margin-right: 0; }\n\n.hp-portfolio-container {\n  display: flex;\n  padding: 400px 5% 200px;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center; }\n  .hp-portfolio-container .hp-portfolio-left .hp-portfolio-right {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -ms-flex: 1;\n    flex: 1; }\n  .hp-portfolio-container .hp-portfolio-left {\n    margin-right: 7px; }\n  .hp-portfolio-container .hp-portfolio-right {\n    margin-left: 7px;\n    margin-top: 200px; }\n  .hp-portfolio-container div {\n    text-align: left; }\n    .hp-portfolio-container div img {\n      background: lightgrey;\n      width: 35vw;\n      height: 45vw;\n      max-width: 480px;\n      border: 0;\n      display: inline-block;\n      vertical-align: middle; }\n    .hp-portfolio-container div a {\n      display: flex;\n      margin-bottom: 150px;\n      -webkit-box-orient: vertical;\n      -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n      flex-direction: column;\n      -webkit-box-align: start;\n      -webkit-align-items: flex-start;\n      -ms-flex-align: start;\n      align-items: flex-start; }\n\n.hp-contact {\n  color: white;\n  text-align: center;\n  flex-direction: column;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center; }\n  .hp-contact .hp-contact-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 100px 15%;\n    margin-left: auto;\n    margin-right: auto; }\n  .hp-contact h4 {\n    width: 85%;\n    max-width: 600px;\n    color: white;\n    font-size: 2.3em;\n    line-height: 1.6em;\n    font-weight: 300;\n    text-align: left;\n    padding-top: 100px;\n    padding-bottom: 100px; }\n  .hp-contact a {\n    color: white; }\n\nfooter {\n  display: flex;\n  width: 100%;\n  padding: 0 50px 50px;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  font-size: .8em; }\n  footer div {\n    display: inline-block; }\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/* Fonts */\n/* Colors */\nh2 {\n  font-size: 1.2em;\n  font-weight: 700;\n  line-height: 1.6em;\n  letter-spacing: 0.03em; }\n\nh3 {\n  letter-spacing: 0.03em;\n  font-size: 1.4em;\n  font-weight: 300; }\n\nh4 {\n  font-weight: 300;\n  font-size: 1.5em;\n  letter-spacing: 0.03em;\n  line-height: 2em; }\n\nh5 {\n  font-weight: 300;\n  letter-spacing: 0.03em; }\n\na {\n  color: black;\n  text-decoration: none;\n  font-weight: 700; }\n\n.backgrounds-hphero {\n  background: black;\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: block;\n  opacity: 0;\n  z-index: -1; }\n\n.backgrounds-aboutus {\n  background-image: url(\"https://daks2k3a4ib2z.cloudfront.net/56d8a8f1100bc1bb7928eebd/5840702431fc8b01783c6c2a_bg-home-aboutus.jpg\");\n  position: fixed;\n  background-size: cover;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  display: block;\n  opacity: 0;\n  z-index: 0; }\n\n* {\n  box-sizing: border-box; }\n\nbody {\n  background: transparent;\n  color: #6B6B6B;\n  font-family: \"Open Sans\", serif;\n  font-weight: 300;\n  font-size: 100%;\n  line-height: 1.4;\n  text-align: center; }\n\nmain {\n  width: 100vw; }\n\nheader {\n  padding: 30px 0 0;\n  text-align: left;\n  opacity: 0;\n  z-index: 999;\n  position: fixed;\n  width: 100%;\n  top: 0; }\n\n.header-logo-small {\n  padding-left: 80px;\n  float: left;\n  cursor: pointer; }\n  .header-logo-small svg {\n    width: 45px; }\n\nnav {\n  float: right;\n  padding-right: 80px; }\n  nav ul {\n    display: inline-block; }\n  nav li {\n    display: inline-block;\n    cursor: pointer;\n    margin: 20px 0 0 45px;\n    text-align: right;\n    top: 11px; }\n\n/* Main Container */\n.hp-hero-main {\n  width: 100%; }\n\n.hp-hero-masthead {\n  min-height: 800px;\n  height: 100vh;\n  position: relative;\n  margin-top: -147px;\n  z-index: -1; }\n\n.hp-hero-masthead-inner {\n  padding: 0 33px;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 57%;\n  -moz-transform: translate(0, -50%);\n  -o-transform: translate(0, -50%);\n  -ms-transform: translate(0, -50%);\n  -webkit-transform: translate(0, -50%);\n  transform: translate(0, -50%); }\n\n/* MastHead */\n.hp-hero-header-container {\n  padding-top: 20%;\n  position: relative;\n  height: 0; }\n  .hp-hero-header-container h1 {\n    margin: 100px auto;\n    width: calc(100vw - 200px); }\n\n.hp-hero-header-solid, .hp-hero-header-border {\n  left: 50%;\n  position: absolute;\n  width: calc(100vw - 200px);\n  height: auto;\n  top: 0;\n  -moz-transform: translate(-50%, 0);\n  -o-transform: translate(-50%, 0);\n  -ms-transform: translate(-50%, 0);\n  -webkit-transform: translate(-50%, 0);\n  transform: translate(-50%, 0); }\n\n.hp-hero-header-solid .inner {\n  overflow: hidden;\n  width: 0; }\n\n.hp-hero-header-solid svg {\n  height: auto;\n  width: calc(100vw - 200px); }\n\n.hp-hero-header-border path {\n  stroke: #000;\n  stroke-width: 1px;\n  fill: none;\n  fill-rule: evenodd; }\n\n.hp-hero-header-border svg {\n  width: calc(100vw - 200px); }\n\n/* Subhead */\n.hp-hero-subhead {\n  text-align: center;\n  margin: 5px 0 0;\n  opacity: 0; }\n\n/* Scroll Down */\n.hp-hero-scroll {\n  top: 85%;\n  left: 0;\n  right: 0;\n  position: absolute; }\n  .hp-hero-scroll svg {\n    animation: bounce 0.8s ease-in;\n    animation-iteration-count: infinite;\n    animation-direction: alternate; }\n\n/* Animations */\npath#we-are-masv.desktop-hp-heading {\n  stroke-dasharray: 284.43;\n  stroke-dashoffset: 284.43;\n  animation: dash 0.8s ease-in 0ms; }\n\npath#we-are-masv-1.desktop-hp-heading {\n  stroke-dasharray: 229.88;\n  stroke-dashoffset: 229.88;\n  animation: dash 0.8s ease-in 15ms; }\n\npath#we-are-masv-2.desktop-hp-heading {\n  stroke-dasharray: 240.94;\n  stroke-dashoffset: 240.94;\n  animation: dash 0.8s ease-in 30ms; }\n\npath#we-are-masv-3.desktop-hp-heading {\n  stroke-dasharray: 160.18;\n  stroke-dashoffset: 160.18;\n  animation: dash 0.8s ease-in 45ms; }\n\npath#we-are-masv-4.desktop-hp-heading {\n  stroke-dasharray: 229.88;\n  stroke-dashoffset: 229.88;\n  animation: dash 0.8s ease-in 60ms; }\n\npath#we-are-masv-5.desktop-hp-heading {\n  stroke-dasharray: 350.72;\n  stroke-dashoffset: 350.72;\n  animation: dash 0.8s ease-in 85ms; }\n\npath#we-are-masv-6.desktop-hp-heading {\n  stroke-dasharray: 240.94;\n  stroke-dashoffset: 240.94;\n  animation: dash 0.8s ease-in 100ms; }\n\npath#we-are-masv-7.desktop-hp-heading {\n  stroke-dasharray: 225.16;\n  stroke-dashoffset: 225.16;\n  animation: dash 0.8s ease-in 115ms; }\n\npath#we-are-masv-8.desktop-hp-heading {\n  stroke-dasharray: 195.5;\n  stroke-dashoffset: 195.5;\n  animation: dash 0.8s ease-in 130ms; }\n\n@keyframes dash {\n  to {\n    stroke-dashoffset: 0; } }\n\n@keyframes bounce {\n  from {\n    transform: translateX(0px) translateY(-5px); }\n  to {\n    transform: translateX(0px) translateY(0px); } }\n\n/* mobile */\n@media screen and (max-width: 800px) {\n  .hp-hero-header-solid, .hp-hero-header-border {\n    width: calc(100vw - 100px); }\n    .hp-hero-header-solid svg, .hp-hero-header-border svg {\n      width: calc(100vw - 100px); }\n    .hp-hero-header-solid h1, .hp-hero-header-border h1 {\n      width: calc(100vw - 100px); }\n  h3 {\n    font-size: 1.2em; }\n  .hp-hero-subhead {\n    margin: 30px 0 0; } }\n\n@media screen and (max-width: 400px) {\n  .hp-hero-header-solid, .hp-hero-header-border {\n    width: calc(100vw - 75px); }\n    .hp-hero-header-solid svg, .hp-hero-header-border svg {\n      width: calc(100vw - 75px); }\n    .hp-hero-header-solid h1, .hp-hero-header-border h1 {\n      width: calc(100vw - 75px); }\n  h3 {\n    font-size: 1em; }\n  .hp-hero-scroll {\n    top: 65%; }\n  header {\n    padding: 0; }\n  .hp-hero-masthead-inner {\n    top: 50%; }\n  .header-logo-small {\n    padding-left: 40px; }\n  nav {\n    padding-right: 40px; } }\n\n.hp-about {\n  color: #efefef;\n  width: 100%;\n  text-align: center;\n  padding: 100px 5% 0;\n  margin-left: 0;\n  margin-right: 0; }\n  .hp-about h4 {\n    position: relative;\n    margin: 0 auto;\n    width: 75%;\n    padding: 175px 0;\n    z-index: 2; }\n    .hp-about h4 span {\n      font-weight: 700; }\n\n.hp-services {\n  color: white;\n  padding-bottom: 175px; }\n  .hp-services li {\n    display: inline-block;\n    margin: 35px; }\n  .hp-services div {\n    height: 125px; }\n  .hp-services h2 {\n    margin-top: 20px; }\n\n.branding {\n  background: url(" + __webpack_require__(302) + ") no-repeat; }\n\n.solutions {\n  background: url(" + __webpack_require__(304) + ") no-repeat; }\n\n.illustration {\n  background: url(" + __webpack_require__(303) + ") no-repeat; }\n\n.branding, .solutions, .illustration {\n  background-position: center; }\n\n@media screen and (max-width: 500px) {\n  .hp-about h4 {\n    font-size: 1.2em;\n    width: 87%; } }\n\n.hp-portfolio {\n  width: 100%;\n  color: black;\n  text-align: center;\n  padding: 100px 5% 0;\n  margin-left: 0;\n  margin-right: 0; }\n\n.hp-portfolio-container {\n  display: flex;\n  padding: 400px 5% 200px;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center; }\n  .hp-portfolio-container .hp-portfolio-left .hp-portfolio-right {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -ms-flex: 1;\n    flex: 1; }\n  .hp-portfolio-container .hp-portfolio-left {\n    margin-right: 7px; }\n  .hp-portfolio-container .hp-portfolio-right {\n    margin-left: 7px;\n    margin-top: 200px; }\n  .hp-portfolio-container div {\n    text-align: left;\n    z-index: 99; }\n    .hp-portfolio-container div img {\n      background: lightgrey;\n      width: 35vw;\n      height: 45vw;\n      max-width: 480px;\n      border: 0;\n      display: inline-block;\n      vertical-align: middle; }\n    .hp-portfolio-container div a {\n      display: flex;\n      margin-bottom: 150px;\n      -webkit-box-orient: vertical;\n      -webkit-flex-direction: column;\n      -ms-flex-direction: column;\n      flex-direction: column;\n      -webkit-box-align: start;\n      -webkit-align-items: flex-start;\n      -ms-flex-align: start;\n      align-items: flex-start; }\n\n@media screen and (max-width: 479px) {\n  .hp-portfolio-container {\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal; }\n    .hp-portfolio-container .hp-portfolio-right {\n      margin-top: 10px; }\n    .hp-portfolio-container .hp-portfolio-left {\n      margin-bottom: 25px; }\n    .hp-portfolio-container div img {\n      width: 76vw;\n      height: 97vw; }\n    .hp-portfolio-container div a {\n      margin-bottom: 50px; } }\n\n.hp-contact {\n  color: white;\n  text-align: center;\n  flex-direction: column;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center; }\n  .hp-contact .hp-contact-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -ms-flexbox;\n    display: flex;\n    padding: 100px 15%;\n    margin-left: auto;\n    margin-right: auto; }\n  .hp-contact h4 {\n    width: 85%;\n    max-width: 600px;\n    color: white;\n    font-size: 2.3em;\n    line-height: 1.6em;\n    font-weight: 300;\n    text-align: left;\n    padding-top: 100px;\n    padding-bottom: 100px;\n    z-index: 9999; }\n  .hp-contact a {\n    color: white; }\n\nfooter {\n  display: flex;\n  width: 100%;\n  padding: 0 50px 50px;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  font-size: .8em;\n  z-index: 9999; }\n  footer div {\n    display: inline-block; }\n\n.social {\n  z-index: 9999; }\n  .social a {\n    padding-left: 25px; }\n\n@media screen and (max-width: 767px) {\n  footer {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    font-size: .7em;\n    display: block;\n    text-align: left; }\n    footer div {\n      width: 100%; } }\n\n@media screen and (max-width: 479px) {\n  .hp-contact h4 {\n    width: 97%;\n    font-size: 1.5em; }\n  footer {\n    position: relative;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 90%;\n    text-align: left; }\n    footer div {\n      width: 100%;\n      margin-bottom: 10px; }\n  .social a {\n    padding-left: 0;\n    padding-right: 25px; } }\n", ""]);
 	
 	// exports
 
@@ -30015,7 +30015,7 @@
 	    Scene = _scrollmagic2.default.Scene;
 	
 	
-	//loading animation
+	_gsap.TweenMax.defaultOverwrite = false;
 	
 	// //scroll to top on page reload
 	(0, _jquery2.default)(document).ready(function () {
@@ -30045,33 +30045,6 @@
 	  width: '100%',
 	  ease: _gsap.Power2.easeIn,
 	  delay: 0.3
-	});
-	//
-	// TweenMax.to(
-	//   ".scroll-line",
-	//   0.8, {
-	//      y: -5,
-	//      yoyo: true,
-	//      repeat: 5,
-	//      onRepeat: onRepeat,
-	//      ease:Bounce,
-	//      delay: 2,
-	//   }
-	// );
-	
-	
-	// logo hover effect
-	
-	(0, _jquery2.default)('.header-logo-small').hover(function () {
-	  (0, _jquery2.default)(this).toggleClass('hover');
-	
-	  _gsap.TweenMax.staggerFromTo(".hover path", 0.2, {
-	    y: "+=100",
-	    opacity: 0
-	  }, {
-	    y: "-=100",
-	    opacity: 1
-	  }, 0.1);
 	});
 	
 	//scroll to position
@@ -30113,63 +30086,54 @@
 	(0, _jquery2.default)(function () {
 	  var scrollMagicController = new _scrollmagic2.default.Controller();
 	
-	  var aboutTween = new _gsap.TimelineMax().to([".backgrounds-hphero", ".hp-hero-main", "nav"], 0.5, {
-	    opacity: 0,
-	    ease: _gsap.Power2.easeOut
-	  }).to('.backgrounds-aboutus', 0.5, {
+	  var aboutTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 1,
-	    ease: _gsap.Power2.easeIn
-	  }).to(".header-logo-small", 0.2, {
+	    ease: _gsap.Power2.easeInOut
+	  }).to(".header-logo-small", 0.12, {
 	    fill: 'white',
-	    ease: _gsap.Power2.easeIn,
-	    delay: 0.12
-	  }).staggerFromTo(['.hp-about-copy', '.hp-services'], 1, {
-	    opacity: 0
+	    ease: _gsap.Power2.easeIn
+	  }).staggerFromTo(['.hp-about-copy', '.hp-services'], 0.2, {
+	    opacity: 0,
+	    y: 0
 	  }, {
 	    opacity: 1,
-	    y: -20,
+	    y: -30,
 	    ease: _gsap.Power2.easeInOut
-	  }, 1);
+	  });
 	
 	  var AboutScene = new _scrollmagic2.default.Scene({
 	    triggerElement: '.hp-about-copy',
-	    offset: -200,
-	    duration: 500
+	    offset: '100vh'
 	  }).setTween(aboutTween).addTo(scrollMagicController);
 	
 	  AboutScene.addIndicators();
 	
-	  var projectsTween = new _gsap.TimelineMax().to([".backgrounds-aboutus"], 0.5, {
+	  var projectsTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 0,
-	    ease: _gsap.Power2.easeOut
-	  }).to(".header-logo-small", 0.2, {
+	    ease: _gsap.Power2.easeInOut
+	  }).to(".header-logo-small", 0.12, {
 	    fill: 'black',
-	    ease: _gsap.Power2.easeIn,
-	    delay: 0.12
+	    ease: _gsap.Power2.easeIn
 	  });
 	
 	  var ProjectsScene = new _scrollmagic2.default.Scene({
 	    triggerElement: '.hp-portfolio',
-	    offset: -250,
-	    duration: 20
+	    offset: '100vh'
 	  }).setTween(projectsTween).addTo(scrollMagicController);
 	
 	  ProjectsScene.addIndicators();
 	
-	  var contactTween = new _gsap.TimelineMax().to([".backgrounds-hphero"], 0.5, {
-	    background: "black",
+	  var contactTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 1,
-	    ease: _gsap.Power2.easeOut
+	    ease: _gsap.Power2.easeInOut
 	  }).to(".header-logo-small", 0.2, {
 	    fill: 'white',
-	    ease: _gsap.Power2.easeIn,
-	    delay: 0.12
+	    ease: _gsap.Power2.easeIn
 	  });
 	
 	  var contactScene = new _scrollmagic2.default.Scene({
 	    triggerElement: '.hp-contact-container',
-	    offset: -450,
-	    duration: 20
+	    offset: '100vh'
 	  }).setTween(contactTween).addTo(scrollMagicController);
 	
 	  contactScene.addIndicators();
