@@ -29,11 +29,11 @@
   }
 
   div {
-    height: 150px;
+    height: 125px;
   }
 
   h2 {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 
@@ -51,4 +51,13 @@
 
 .branding, .solutions, .illustration {
   background-position: center;
+}
+
+@media screen and (max-width: 500px) {
+  .hp-about {
+    h4 {
+    font-size: 1.2em;
+    width: 87%;
+    }
+  }
 }

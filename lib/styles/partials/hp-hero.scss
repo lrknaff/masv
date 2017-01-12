@@ -8,7 +8,7 @@
   height: 100vh;
   position: relative;
   margin-top: -147px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .hp-hero-masthead-inner {
@@ -87,7 +87,7 @@
 /* Scroll Down */
 
 .hp-hero-scroll {
-  top: 80%;
+  top: 85%;
   left: 0;
   right: 0;
   position: absolute;
@@ -166,5 +166,51 @@ path#we-are-masv-8.desktop-hp-heading {
   }
   to {
     transform: translateX(0px) translateY(0px);
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 800px) {
+  .hp-hero-header-solid, .hp-hero-header-border {
+    width: calc(100vw - 100px);
+    svg {
+    width: calc(100vw - 100px)
+    }
+    h1 {
+      width: calc(100vw - 100px)
+    }
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  .hp-hero-subhead {
+    margin: 30px 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hp-hero-header-solid, .hp-hero-header-border {
+    width: calc(100vw - 75px);
+    svg {
+    width: calc(100vw - 75px)
+    }
+    h1 {
+      width: calc(100vw - 75px)
+    }
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .hp-hero-scroll {
+    top: 65%;
+  }
+  header {
+    padding: 0;
+  }
+  .hp-hero-masthead-inner {
+    top: 50%;
+  }
+  .header-logo-small {
+    padding-left: 40px;
   }
 }
