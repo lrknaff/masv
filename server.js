@@ -18,6 +18,7 @@ app.use(require("webpack-hot-middleware")(compiler));
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use('/projects/:name', express.static(path.join(__dirname, 'projects')));
+
 // And run the server
 app.listen(port, function () {
   console.log('Server running on port ' + port);
