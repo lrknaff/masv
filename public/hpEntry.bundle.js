@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ffe5b3cd00c9ea2fcf09"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0e04ed60915d7a7b3dd8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29717,7 +29717,7 @@
 	(0, _jquery2.default)(function () {
 	  var scrollMagicController = new _scrollmagic2.default.Controller();
 	
-	  var aboutTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var aboutTween = new TimelineMax().to(".backgrounds-hphero", 0.5, {
 	    opacity: 1,
 	    ease: Power2.easeInOut
 	  }).to(".header-logo-small", 0.12, {
@@ -29725,10 +29725,12 @@
 	    ease: Power2.easeIn
 	  }).staggerFromTo(['.hp-about-copy', '.hp-services'], 0.2, {
 	    opacity: 0,
-	    y: 0
+	    y: 0,
+	    autoAlpha: 0
 	  }, {
 	    opacity: 1,
-	    y: -30,
+	    y: '40px',
+	    autoAlpha: 0.3,
 	    ease: Power2.easeInOut
 	  });
 	
@@ -29739,7 +29741,7 @@
 	
 	  // AboutScene.addIndicators();
 	
-	  var projectsTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var projectsTween = new TimelineMax().to(".backgrounds-hphero", 0.5, {
 	    opacity: 0,
 	    ease: Power2.easeInOut,
 	    immediateRender: false
@@ -29757,7 +29759,7 @@
 	  // ProjectsScene.addIndicators();
 	
 	
-	  var contactTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var contactTween = new TimelineMax().to(".backgrounds-hphero", 0.5, {
 	    opacity: 1,
 	    ease: Power2.easeInOut,
 	    immediateRender: false

@@ -360,13 +360,15 @@ path#we-are-masv-8.desktop-hp-heading {
   text-align: center;
   padding: 100px 5% 0;
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0;
+  padding: 400px 5% 200px;
+  transform: translate3d(10px, 20px, 0); }
   .hp-about h4 {
     position: relative;
     margin: 0 auto;
     width: 75%;
-    padding: 175px 0;
-    z-index: 2; }
+    z-index: 2;
+    padding: 400px 5% 200px; }
     .hp-about h4 span {
       font-weight: 700; }
 
