@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "supervisor server",
+    "start": "nodemon server.js",
     "build": "webpack",
     "test": "mocha --compilers js:babel-register --require test/helpers/setup.js --recursive"
   },
