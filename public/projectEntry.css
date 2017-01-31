@@ -222,47 +222,83 @@ nav {
 path#we-are-masv.desktop-hp-heading {
   stroke-dasharray: 284.43;
   stroke-dashoffset: 284.43;
-  animation: dash 0.8s ease-in 0ms; }
+  animation: dash 0.8s ease-in 0ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-1.desktop-hp-heading {
   stroke-dasharray: 229.88;
   stroke-dashoffset: 229.88;
-  animation: dash 0.8s ease-in 15ms; }
+  animation: dash 0.8s ease-in 15ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-2.desktop-hp-heading {
   stroke-dasharray: 240.94;
   stroke-dashoffset: 240.94;
-  animation: dash 0.8s ease-in 30ms; }
+  animation: dash 0.8s ease-in 30ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-3.desktop-hp-heading {
   stroke-dasharray: 160.18;
   stroke-dashoffset: 160.18;
-  animation: dash 0.8s ease-in 45ms; }
+  animation: dash 0.8s ease-in 45ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-4.desktop-hp-heading {
   stroke-dasharray: 229.88;
   stroke-dashoffset: 229.88;
-  animation: dash 0.8s ease-in 60ms; }
+  animation: dash 0.8s ease-in 60ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-5.desktop-hp-heading {
   stroke-dasharray: 350.72;
   stroke-dashoffset: 350.72;
-  animation: dash 0.8s ease-in 85ms; }
+  animation: dash 0.8s ease-in 85ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-6.desktop-hp-heading {
   stroke-dasharray: 240.94;
   stroke-dashoffset: 240.94;
-  animation: dash 0.8s ease-in 100ms; }
+  animation: dash 0.8s ease-in 100ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-7.desktop-hp-heading {
   stroke-dasharray: 225.16;
   stroke-dashoffset: 225.16;
-  animation: dash 0.8s ease-in 115ms; }
+  animation: dash 0.8s ease-in 115ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 path#we-are-masv-8.desktop-hp-heading {
   stroke-dasharray: 195.5;
   stroke-dashoffset: 195.5;
-  animation: dash 0.8s ease-in 130ms; }
+  animation: dash 0.8s ease-in 130ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
 
 @keyframes dash {
   to {
