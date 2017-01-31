@@ -186,7 +186,14 @@ nav {
 
 .hp-hero-header-solid .inner {
   overflow: hidden;
-  width: 0; }
+  width: 0;
+  animation: fill 0.8s ease-in;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s; }
 
 .hp-hero-header-solid svg {
   height: auto;
@@ -219,15 +226,6 @@ nav {
     animation-direction: alternate; }
 
 /* Animations */
-.inner {
-  opacity: 0;
-  width: 0;
-  animation: fill 0.8s ease-in 0ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards; }
-
 path#we-are-masv.desktop-hp-heading {
   stroke-dasharray: 284.43;
   stroke-dashoffset: 284.43;
@@ -313,10 +311,9 @@ path#we-are-masv-8.desktop-hp-heading {
   to {
     stroke-dashoffset: 0; } }
 
-@keyframes dash {
+@keyframes fill {
   to {
-    width: 100%;
-    opacity: 1; } }
+    width: 100%; } }
 
 @keyframes bounce {
   from {
