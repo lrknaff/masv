@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b6c7a4765d6fa51a5d86"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "96cff04aa8e0842d28d5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -29653,7 +29653,7 @@
 	    Scene = _scrollmagic2.default.Scene;
 	
 	
-	_gsap.TweenMax.defaultOverwrite = false;
+	TweenLite.defaultOverwrite = false;
 	
 	// //scroll to top on page reload
 	(0, _jquery2.default)(document).ready(function () {
@@ -29664,25 +29664,18 @@
 	
 	//hp-hero animation on load
 	
-	_gsap.TweenMax.to(".gsap-animate-fade-down", 0.5, {
+	TweenMax.to(".gsap-animate-fade-down", 0.5, {
 	  opacity: 1,
 	  y: 50,
-	  ease: _gsap.Power2.easeIn,
+	  ease: Power2.easeIn,
 	  delay: 0.5
 	});
 	
-	_gsap.TweenMax.to("header", 0.5, {
+	TweenMax.to("header", 0.5, {
 	  opacity: 1,
 	  y: 50,
-	  ease: _gsap.Power2.easeIn,
+	  ease: Power2.easeIn,
 	  delay: 1
-	});
-	
-	_gsap.TweenMax.to(".inner", 0.7, {
-	  opacity: 1,
-	  width: '100%',
-	  ease: _gsap.Power2.easeIn,
-	  delay: 0.3
 	});
 	
 	//scroll to position
@@ -29724,19 +29717,19 @@
 	(0, _jquery2.default)(function () {
 	  var scrollMagicController = new _scrollmagic2.default.Controller();
 	
-	  var aboutTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var aboutTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 1,
-	    ease: _gsap.Power2.easeInOut
+	    ease: Power2.easeInOut
 	  }).to(".header-logo-small", 0.12, {
 	    fill: 'white',
-	    ease: _gsap.Power2.easeIn
+	    ease: Power2.easeIn
 	  }).staggerFromTo(['.hp-about-copy', '.hp-services'], 0.2, {
 	    opacity: 0,
 	    y: 0
 	  }, {
 	    opacity: 1,
 	    y: -30,
-	    ease: _gsap.Power2.easeInOut
+	    ease: Power2.easeInOut
 	  });
 	
 	  var AboutScene = new _scrollmagic2.default.Scene({
@@ -29746,12 +29739,14 @@
 	
 	  // AboutScene.addIndicators();
 	
-	  var projectsTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var projectsTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 0,
-	    ease: _gsap.Power2.easeInOut
+	    ease: Power2.easeInOut,
+	    immediateRender: false
 	  }).to(".header-logo-small", 0.12, {
 	    fill: 'black',
-	    ease: _gsap.Power2.easeIn
+	    ease: Power2.easeIn,
+	    immediateRender: false
 	  });
 	
 	  var ProjectsScene = new _scrollmagic2.default.Scene({
@@ -29762,12 +29757,14 @@
 	  // ProjectsScene.addIndicators();
 	
 	
-	  var contactTween = new _gsap.TimelineMax().to(".backgrounds-hphero", 0.8, {
+	  var contactTween = new TimelineMax().to(".backgrounds-hphero", 0.8, {
 	    opacity: 1,
-	    ease: _gsap.Power2.easeInOut
+	    ease: Power2.easeInOut,
+	    immediateRender: false
 	  }).to(".header-logo-small", 0.2, {
 	    fill: 'white',
-	    ease: _gsap.Power2.easeIn
+	    ease: Power2.easeIn,
+	    immediateRender: false
 	  });
 	
 	  var contactScene = new _scrollmagic2.default.Scene({
