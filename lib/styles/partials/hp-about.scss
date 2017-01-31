@@ -28,29 +28,13 @@
   margin: 35px;
   }
 
-  div {
+  img {
     height: 125px;
   }
 
   h2 {
     margin-top: 20px;
   }
-}
-
-.branding {
-  background: url('../../lib/images/branding.svg') no-repeat;
-}
-
-.solutions {
-  background: url('../../lib/images/solutions.svg') no-repeat;
-}
-
-.illustration {
-  background: url('../../lib/images/illustration.svg') no-repeat;
-}
-
-.branding, .solutions, .illustration {
-  background-position: center;
 }
 
 @media screen and (max-width: 500px) {
