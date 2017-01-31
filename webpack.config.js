@@ -2,13 +2,8 @@ const path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var $ = require('jquery');
-var webpackMiddleware = require("webpack-dev-middleware");
-var webpackHotMiddleware = require('webpack-hot-middleware');
 
 module.exports = {
-  entry : [
-    'webpack-hot-middleware/client'
-  ],
   entry: {
     hpEntry: ['babel-polyfill', './lib/HpIndex.js'],
     projectEntry: ['babel-polyfill', './lib/ProjectIndex.js'],
@@ -31,17 +26,18 @@ module.exports = {
       },
     },
     { test: /\.css$/, loader: 'style!css' },
-    { test: /\.scss$/, loader: 'style!css!sass' },
+    // { test: /\.scss$/, loader: 'style!css!sass' },
+    { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader") },
     { test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
         'file?hash=sha512&digest=hex&name=[hash].[ext]',
-        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
+        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
       ],
     },
   ],
 },
 plugins: [
-      new ExtractTextPlugin("index.scss"),
+      new ExtractTextPlugin("[name].css"),
       new webpack.optimize.OccurenceOrderPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin()
