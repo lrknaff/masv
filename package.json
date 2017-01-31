@@ -21,7 +21,7 @@
     "url": "https://github.com/lrknaff/masv/issues"
   },
   "homepage": "https://github.com/lrknaff/masv#readme",
-  "devDependencies": {
+  "dependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.14.0",
@@ -32,39 +32,32 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.14.0",
-    "chai": "^3.5.0",
     "css-loader": "^0.25.0",
     "escape-html": "^1.0.3",
     "eslint": "^3.5.0",
     "eslint-plugin-import": "^1.16.0",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gsap": "1.19.0",
     "image-webpack-loader": "^3.0.0",
     "imports-loader": "^0.7.0",
-    "locus": "^1.2.0",
-    "mocha": "^3.2.0",
-    "mocha-loader": "^1.0.0",
+    "jquery": "^3.1.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.13.1",
     "sass-loader": "^4.1.1",
     "scrollmagic": "~2.0.5",
-    "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.15.0"
   },
-  "dependencies": {
-    "animate.css": "^3.5.2",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "gsap": "1.19.0",
-    "jquery": "^3.1.1",
-    "lodash": "^4.15.0",
-    "md5": "^2.2.1",
-    "scrollmagic": "2.0.5",
-    "webpack": "^1.14.0"
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "locus": "^1.2.0",
+    "mocha": "^3.2.0",
+    "mocha-loader": "^1.0.0",
+    "sinon": "^1.17.6"
   },
   "overrides": {
     "gsap": {
